@@ -1,0 +1,14 @@
+<link rel="import" href="../node_modules/core-ajax-npm/core-ajax.html">
+<polymer-element name="glg-compliance-blinky" attributes="cmId csId">
+  <template>
+    <link rel="stylesheet" type="text/css" href="./glg-compliance-blinky.less">
+    <core-ajax
+      auto
+      url="https://services.glgresearch.com/epiquery/councilMember/profile/getFlags.mustache"
+      params='{"councilMemberId":{{cmId}}}'
+      handleAs="json"
+      withCredentials="true"
+      on-core-response="{{handleBadgeResponse}}"></core-ajax>
+  </template>
+  <script src="./glg-compliance-blinky.litcoffee"></script>
+</polymer-element>
