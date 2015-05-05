@@ -1,16 +1,19 @@
 @import "../node_modules/ui-styles/variables";
-@import "../node_modules/ui-styles/visual-elements";
-@import "../node_modules/ui-styles/typography";
-@import "../node_modules/ui-fonts/node_modules/ui-font-awesome/icons";
-@import "../node_modules/ui-fonts/node_modules/ui-font-awesome/font-awesome-icons";
-
-// Need flipped/rotated declarations; thus need prefix and mixins.
-@fa-css-prefix: fa;
-@import "../node_modules/ui-fonts/node_modules/ui-font-awesome/node_modules/font-awesome/less/mixins";
-@import "../node_modules/ui-fonts/node_modules/ui-font-awesome/node_modules/font-awesome/less/rotated-flipped";
 
 @size: 1.2em;
 @neutralColor: #ccc;
+
+@success: #3c763d;
+@successBg: #dff0d8;
+@successBrd: #d6e9c6;
+
+@warning: #8a6d3b;
+@warningBg: #fcf8e3;
+@warningBrd: #faebcc;
+
+@error: #a94442;
+@errorBg: #f2dede;
+@errorBrd: #ebccd1;
 
 :host {
   display: inline-block;
@@ -31,5 +34,10 @@
     svg {
       padding-top: 0.125em;
     }
+  }
+
+  .good {
+    background-color: @successBg;
+    border-color: @successBrd;
   }
 }

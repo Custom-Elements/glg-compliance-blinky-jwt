@@ -12,6 +12,10 @@ Doesn't do much besides respond to the `core-ajax` call and process the response
 
     Polymer 'glg-compliance-blinky',
       created: ->
+        @working = false
+        @good = true
+        @hold = false
+        @blocked = false
 
       ready: ->
 
@@ -25,7 +29,13 @@ Doesn't do much besides respond to the `core-ajax` call and process the response
       onResponse: (e, response) ->
         messages = response?.response?.councilMembers
         return console.error "Error retrieving compliance message for {{@cmId}}:", response if not messages
-        console.log messages[@cmId]
+        @parseMessages(messages[@cmId])
 
       onComplete: ->
         @working = false
+
+      parseMessages: (messages) ->
+        tooltips = []
+        messages.forEach (m) ->
+          console.log m
+        @tooltip = tooltips.join '\n'
