@@ -14,10 +14,11 @@
 
 :host {
   display: inline-block;
-  vertical-align: bottom;
 
   .blinky {
     display: inline-block;
+    vertical-align: bottom;
+    text-align: center;
     border: 1px solid @neutralColor;
     width: @size;
     height: @size;
@@ -26,5 +27,9 @@
 
   .working {
     fill: @neutralColor;
+
+    svg {
+      padding-top: 0.125em;
+    }
   }
 }
