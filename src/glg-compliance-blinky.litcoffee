@@ -42,4 +42,4 @@ Doesn't do much besides respond to the `core-ajax` call and process the response
         if messages.length
           @tooltip = messages.map( (message) -> message.message).join '\n'
         else
-          @tooltip = "Compliance OK"
+          @tooltip = "No Hold or Block"
