@@ -1,19 +1,18 @@
 @import "../node_modules/ui-styles/variables";
 
 @size: 1.2em;
-@neutralColor: #ccc;
 
-@success: #3c763d;
-@successBg: #dff0d8;
-@successBrd: #d6e9c6;
+@success: @color-text;
+@successBg: @secondary-green;
+@successBrd: fade(@secondary-green, @justahint);
 
-@warning: #8a6d3b;
-@warningBg: #fcf8e3;
-@warningBrd: #faebcc;
+@warning: @color-text;
+@warningBg: @secondary-yellow;
+@warningBrd: fade(@secondary-yellow, @justahint);
 
-@error: #a94442;
-@errorBg: #f2dede;
-@errorBrd: #ebccd1;
+@error: @color-text;
+@errorBg: @secondary-red;
+@errorBrd: fade(@secondary-red, @justahint);
 
 :host {
   display: inline-block;
@@ -22,14 +21,14 @@
     display: inline-block;
     vertical-align: bottom;
     text-align: center;
-    border: 1px solid @neutralColor;
+    border: 1px solid @color-border;
     width: @size;
     height: @size;
     border-radius: 50%;
   }
 
   .working {
-    fill: @neutralColor;
+    fill: @color-border;
 
     svg {
       padding-top: 0.125em;
@@ -40,4 +39,15 @@
     background-color: @successBg;
     border-color: @successBrd;
   }
+
+  .hold {
+    background-color: @warningBg;
+    border-color: @warningBrd;
+  }
+
+  .blocked {
+    background-color: @errorBg;
+    border-color: @errorBrd;
+  }
+
 }
