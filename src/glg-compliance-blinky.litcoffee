@@ -37,7 +37,7 @@ Doesn't do much besides respond to the `core-ajax` call and process the response
         messages.forEach (message) =>
           if message.level is 'hold'
             @hold = true
-          if message.level is 'blocked'
+          if message.level is 'block'
             @blocked = true
         if messages.length
           @tooltip = messages.map( (message) -> message.message).join '\n'
