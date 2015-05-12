@@ -41,7 +41,5 @@ Doesn't do much besides respond to the `core-ajax` call and process the response
             @blocked = true
         if messages.length
           @tooltip = messages.map( (message) -> message.message).join '\n'
-          if @ruleSet is 'event'
-            @tooltip = @tooltip.replace /consultations/, 'events'
         else
           @tooltip = "No Hold or Block"
