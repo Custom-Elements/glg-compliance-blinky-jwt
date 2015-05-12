@@ -1,11 +1,11 @@
 <link rel="import" href="../node_modules/core-ajax-npm/core-ajax.html">
-<polymer-element name="glg-compliance-blinky" attributes="cmId projectId">
+<polymer-element name="glg-compliance-blinky" attributes="cmId projectId contactId ruleSet">
   <template>
     <link rel="stylesheet" type="text/css" href="./glg-compliance-blinky.less">
     <core-ajax
       auto
-      url="https://services.glgresearch.com/compliance-un-dc-migration/api/validate/"
-      params='{"src":"glg-compliance-blinky","cmIds":"{{cmId}}","projectId":"{{projectId}}"}'
+      url="https://services.glgresearch.com/compliance-un-dc-migration/api/{{ruleSet}}validate/"
+      params='{"src":"glg-compliance-blinky","cmIds":"{{cmId}}","projectId":"{{projectId}}","contactId":"{{contactId}}"}'
       handleAs="json"
       withCredentials="true"
       on-core-response="{{onResponse}}"
