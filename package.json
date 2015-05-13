@@ -20,6 +20,7 @@
     "polymer-serve": "^0.0.30",
     "ui-fonts": "git://github.com/custom-elements/ui-fonts#master",
     "ui-styles": "git://github.com/custom-elements/ui-styles#master",
+    "ui-tooltip": "git://github.com/custom-elements/ui-tooltip",
     "core-ajax-npm": "git://github.com/custom-elements/core-ajax-npm"
   }
 }

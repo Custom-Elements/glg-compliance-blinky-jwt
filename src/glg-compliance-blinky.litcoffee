@@ -34,12 +34,16 @@ Doesn't do much besides respond to the `core-ajax` call and process the response
         @working = false
 
       parseMessages: (messages) ->
+        clearedMessages = []
         messages.forEach (message) =>
+          if message.rule is 'restrictTermsAndConditions'
+            return
           if message.level is 'hold'
             @hold = true
           if message.level is 'block'
             @blocked = true
-        if messages.length
-          @tooltip = messages.map( (message) -> message.message).join '\n'
+          clearedMessages.push message
+        if clearedMessages.length
+          @tooltip = clearedMessages.map( (message) -> message.message).join '\n'
         else
           @tooltip = "No Hold or Block"
