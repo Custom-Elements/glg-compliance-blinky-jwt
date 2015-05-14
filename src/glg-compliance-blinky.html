@@ -10,15 +10,18 @@
       handleAs="json"
       withCredentials="true"
       on-core-response="{{onResponse}}"
+      on-core-error="{{onError}}"
       on-core-complete="{{onComplete}}"></core-ajax>
 
     <ui-tooltip display="right down">
       <span tip>{{tooltip}}</span>
-      <div class="blinky good" hidden?="{{working || hold || blocked}}"></div>
+      <div class="blinky good" hidden?="{{working || hold || blocked || errored}}"></div>
 
-      <div class="blinky hold" hidden?="{{working || !hold || blocked}}"></div>
+      <div class="blinky hold" hidden?="{{working || !hold || blocked || errored}}"></div>
 
-      <div class="blinky blocked" hidden?="{{working || !blocked}}"></div>
+      <div class="blinky blocked" hidden?="{{working || !blocked || errored}}"></div>
+
+      <div class="blinky errored" hidden?="{{working || !errored}}"></div>
     </ui-tooltip>
 
     <div class="blinky working" hidden?="{{!working}}">
