@@ -1,26 +1,16 @@
 {
-  "name": "glg-compliance-blinky",
+  "name": "glg-cm-recommender",
   "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "polymer-serve ./"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Custom-Elements/glg-compliance-blinky.git"
-  },
-  "author": "David Hayes <drhayes@gmail.com> (http://drhayes.io/)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Custom-Elements/glg-compliance-blinky/issues"
-  },
-  "homepage": "https://github.com/Custom-Elements/glg-compliance-blinky.git",
   "dependencies": {
-    "polymer-serve": "^0.0.30",
-    "ui-fonts": "git://github.com/custom-elements/ui-fonts#master",
-    "ui-styles": "git://github.com/custom-elements/ui-styles#master",
-    "ui-tooltip": "git://github.com/custom-elements/ui-tooltip",
-    "core-ajax-npm": "git://github.com/custom-elements/core-ajax-npm"
+    "polymer": "git://github.com/custom-elements/polymer",
+    "polymer-serve": "^0.0.35",
+    "ui-fonts": "^0.0.1",
+    "core-ajax-npm": "git://github.com/custom-elements/core-ajax-npm#master"
+  },
+  "author": "Sayeef Bazli <sayeef.bazli@gmail.com>, Josh Levy <levy.5674@gmail.com>",
+  "repository": "git@github.com:Custom-Elements/glg-cm-recommender.git",
+  "license": "MIT",
+  "scripts": {
+    "test": "polymer-serve ."
   }
 }
