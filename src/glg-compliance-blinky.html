@@ -1,12 +1,12 @@
 <link rel="import" href="../node_modules/core-ajax-npm/core-ajax.html">
 <link rel="import" href="../node_modules/ui-tooltip/src/ui-tooltip.html">
-<polymer-element name="glg-compliance-blinky" attributes="cmId projectId contactId ruleSet">
+<polymer-element name="glg-compliance-blinky" attributes="cmId leadId projectId contactId ruleSet">
   <template>
     <link rel="stylesheet" type="text/css" href="./glg-compliance-blinky.less">
     <core-ajax
       auto
       url="https://services.glgresearch.com/compliance-epi/api/{{ruleSet}}validate/"
-      params='{"src":"glg-compliance-blinky","cmIds":"{{cmId}}","projectId":"{{projectId}}","contactId":"{{contactId}}"}'
+      params='{"src":"glg-compliance-blinky","cmIds":"{{cmId}}","leadIds":"{{leadId}}","projectId":"{{projectId}}","contactId":"{{contactId}}"}'
       handleAs="json"
       withCredentials="true"
       on-core-response="{{onResponse}}"
