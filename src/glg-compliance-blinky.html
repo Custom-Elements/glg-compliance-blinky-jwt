@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="./glg-compliance-blinky.less">
     <core-ajax
       auto
-      url="https://services.glgresearch.com/compliance-{{path}}/api/{{ruleSet}}validate/"
+      url="https://services.glgresearch.com/compliance/api/{{ruleSet}}validate/"
       params='{"src":"glg-compliance-blinky","cmIds":"{{cmId}}","leadIds":"{{leadId}}","projectId":"{{projectId}}","contactId":"{{contactId}}"}'
       handleAs="json"
       withCredentials="true"

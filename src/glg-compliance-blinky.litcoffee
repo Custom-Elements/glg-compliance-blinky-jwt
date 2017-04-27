@@ -18,17 +18,12 @@ Doesn't do much besides respond to the `core-ajax` call and process the response
         @blocked = false
 
       ready: ->
-        # point to compliance-live for events because compliance-epi is not working when ruleSet = event
-        if @ruleSet == 'event/'
-          @path = 'live'
-        else
-          @path = 'epi'
 
       attached: ->
         @working = true
 
       domReady: ->
-    
+
       detached: ->
 
       onResponse: (e, response) ->
