@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/Custom-Elements/glg-compliance-blinky.git",
   "dependencies": {
-    "polymer-serve": "^0.0.30",
+    "polymer-serve": "0.0.30",
     "ui-fonts": "git://github.com/custom-elements/ui-fonts#master",
     "ui-styles": "git://github.com/custom-elements/ui-styles#master",
     "ui-tooltip": "git://github.com/custom-elements/ui-tooltip",
