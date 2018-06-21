@@ -1,4 +1,4 @@
-# glg-compliance-blinky
+# glg-compliance-blinky-jwt
 
 Status indicator for compliance status.
 
@@ -13,5 +13,5 @@ Takes the following attributes:
   * ruleSet (optional)
 
 ```html
-  <glg-compliance-blinky cmId="527313" projectId="1994800"></glg-compliance-blinky>
+  <glg-compliance-blinky-jwt cmId="527313" projectId="1994800"></glg-compliance-blinky-jwt>
 ```

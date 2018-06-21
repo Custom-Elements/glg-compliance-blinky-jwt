@@ -1,12 +1,12 @@
 <link rel="import" href="../node_modules/core-ajax-npm/core-ajax.html">
 <link rel="import" href="../node_modules/ui-tooltip/src/ui-tooltip.html">
-<polymer-element name="glg-compliance-blinky" attributes="cmId leadId projectId contactId ruleSet">
+<polymer-element name="glg-compliance-blinky-jwt" attributes="cmId leadId projectId contactId ruleSet">
   <template>
-    <link rel="stylesheet" type="text/css" href="./glg-compliance-blinky.less">
+    <link rel="stylesheet" type="text/css" href="./glg-compliance-blinky-jwt.less">
     <core-ajax
       auto
       url="https://services.glgresearch.com/compliance-jwt/api/{{ruleSet}}validate/"
-      params='{"src":"glg-compliance-blinky","cmIds":"{{cmId}}","leadIds":"{{leadId}}","projectId":"{{projectId}}","contactId":"{{contactId}}"}'
+      params='{"src":"glg-compliance-blinky-jwt","cmIds":"{{cmId}}","leadIds":"{{leadId}}","projectId":"{{projectId}}","contactId":"{{contactId}}"}'
       handleAs="json"
       withCredentials="true"
       on-core-response="{{onResponse}}"
@@ -44,5 +44,5 @@
       </svg>
     </div>
   </template>
-  <script src="./glg-compliance-blinky.litcoffee"></script>
+  <script src="./glg-compliance-blinky-jwt.litcoffee"></script>
 </polymer-element>

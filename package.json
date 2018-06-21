@@ -1,5 +1,5 @@
 {
-  "name": "glg-compliance-blinky",
+  "name": "glg-compliance-blinky-jwt",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Custom-Elements/glg-compliance-blinky.git"
+    "url": "https://github.com/Custom-Elements/glg-compliance-blinky-jwt.git"
   },
   "author": "David Hayes <drhayes@gmail.com> (http://drhayes.io/)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Custom-Elements/glg-compliance-blinky/issues"
+    "url": "https://github.com/Custom-Elements/glg-compliance-blinky-jwt/issues"
   },
-  "homepage": "https://github.com/Custom-Elements/glg-compliance-blinky.git",
+  "homepage": "https://github.com/Custom-Elements/glg-compliance-blinky-jwt.git",
   "dependencies": {
     "polymer-serve": "0.0.30",
     "ui-fonts": "git://github.com/custom-elements/ui-fonts#master",

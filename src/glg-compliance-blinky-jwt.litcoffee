@@ -6,11 +6,11 @@ project via the `core-ajax` element.
 Should handle rule exclusions.
 Should maybe handle multiple CMs? Too chatty? Premature optimization?
 
-# The `glg-compliance-blinky` Element
+# The `glg-compliance-blinky-jwt` Element
 
 Doesn't do much besides respond to the `core-ajax` call and process the response.
 
-    Polymer 'glg-compliance-blinky',
+    Polymer 'glg-compliance-blinky-jwt',
       created: ->
         @errored = false
         @working = false
@@ -36,7 +36,7 @@ Doesn't do much besides respond to the `core-ajax` call and process the response
         @errored = true
         if response.xhr?.status >= 500 and response.xhr?.status <= 599
           @tooltip = 'The server encountered an error. Please try again later.'
-          console.error "glg-compliance-blinky: This blew up: #{response.xhr.responseURL}"
+          console.error "glg-compliance-blinky-jwt: This blew up: #{response.xhr.responseURL}"
 
       onComplete: ->
         @working = false
